@@ -1,0 +1,644 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --bg-color: #0c0c0c;
+    --text-color: #fff;
+    --main-color: #ae8957;
+    --big-font: 6.6rem;
+    --p-font: 1rem;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 35px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .5s ease;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    display: inline-block;
+    margin: 0 35px;
+    color: var(--text-color);
+    font-size: 20px;
+    transition: all .6s ease;
+}
+
+.navlist a:hover {
+    color: white;
+    background-color: black;
+    padding: 12px;
+    border: 4px solid var(--text-color);
+    border-radius: 10px ;
+
+}
+
+.right-content {
+    display: flex;
+    align-items: center;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 9px 24px;
+    background: transparent;
+    border: 2px solid var(--text-color);
+    border-radius: 7px;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    transition: all .6s ease;
+}
+
+.nav-btn:hover {
+    transform: translate(-5px);
+    border: 2px solid var(--main-color);
+    color: var(--text-color);
+    background-color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 42px;
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 25px;
+    display: none;
+}
+
+section {
+    padding: 0 14%;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(/images/bg.png);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-img img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text h1{
+    font-size: var(--big-font);
+    font-weight: 900;
+    margin: 15px 0;
+}
+
+.hero-text h5{
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.hero-text p{
+    width: 100%;
+    max-width: 620px;
+    font-size: var(--p-font);
+    font-weight: 400 ;
+    line-height:  32px;
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+
+.main-hero{
+    display: flex;
+    align-items: center;
+
+}
+
+.btn{
+    display: inline-block;
+    padding: 13px 32px;
+    background: var(--main-color);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    color: var(--text-color);
+    font-size: 15px ;
+    font-weight: 500;
+    transition: all .6s ease;
+    margin-right: 30px;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--text-color)
+
+}
+
+.price span{
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--main-color);
+    margin-left: 10px;
+}
+
+.icons{
+    position: absolute;
+    top: 50%;
+    padding: 0.7%;
+    transform: translateY(-50%);
+}
+
+.icons i{
+    display: block;
+    margin: 85px 100px;
+    color: var(--text-color);
+    font-size: 50px;
+    transition: all .6s ease;
+}
+
+.icons i:hover{
+    transform: translateY(-5px);
+    color: var(--main-color);
+}
+
+/* Scroll Button */
+.scroll {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+}
+
+.scroll a {
+    font-size: 18px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.scroll a i {
+    font-size: 24px; /* Larger icon size */
+}
+
+/* About Section */
+/* About Section Wrapper */
+.aboutus-wrapper {
+    background-color: var(--main-color);
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Main Heading */
+.aboutus {
+    font-size: 3rem;
+    color: var(--text-color);
+    margin: 0;
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
+    background-color: var(--main-color);
+    width: 100%;
+    padding: 30px;
+}
+
+/* Underline Effect */
+.aboutus::after {
+    content: "";
+    display: block;
+    width: 80%; /* Adjust width of the underline */
+    height: 4px;
+    background-color: var(--text-color);
+    margin: 10px auto 0;
+}
+
+.about {
+    padding: 100px 7%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: var(--main-color);
+    border: 3px solid var(--text-color);
+    border-radius: 15px;
+   padding: 30px;
+   margin-top: 70px;
+}
+
+.about h2 {
+    font-size: 2.8rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about h3 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: var(--main-color);
+}
+
+.about ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.about ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+    font-size: 1rem;
+}
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 89px; /* Define a height for the header */
+    background-color: var(--main-color); /* Adjust as per your main color */
+    z-index: 1000; /* Keep it on top of other elements */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    padding: 0 20px; /* Add horizontal padding if needed */
+}
+
+/* Adjust Main Content Padding */
+.about {
+    padding-top: 100px; /* This value should be the height of your header plus a bit extra */
+    padding: 100px 7% 20px; /* Adjust the bottom padding if needed */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column; /* Stacks vertically */
+    gap: 20px; /* Spacing between each section */
+    max-width: 1200px; /* Adjust width as needed */
+    margin: 25px auto; /* Center the container */
+
+}
+
+.about-box {
+    padding: 20px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.about h2, .about h3 {
+    text-align: center;
+    color: var(--text-color);
+}
+
+
+
+
+footer {
+    background-color:black; /* Dark background for the footer */
+    color: white;
+    padding: 30px 0;
+    border: 2px solid var(--text-color);
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column {
+    width: 30%; /* Adjusted to 3 equal columns */
+    margin-bottom: 20px;
+}
+
+.footer-column h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color:var(--main-color) ; /* A warm color that complements coffee themes */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+
+}
+
+.footer-column li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: var(--big-font);
+}
+
+.footer-column li a:hover {
+    color: var(--main-color) ; /* Highlight link color */
+    text-decoration: underline;
+}
+
+.subscribe input {
+    padding: 10px;
+    width: 80%;
+    margin-right: 10px;
+    margin: 10px;
+}
+
+.subscribe button {
+    padding: 10px;
+    background-color:var(--main-color) ; /* Warm color to match coffee theme */
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+    
+}
+
+.subscribe button:hover {
+    background-color:white;/* Darken on hover */
+    border-radius: 5px;
+    color: black;
+}
+ 
+.contact-info img{
+    background-color: white;
+    font-size: 20px
+
+}
+
+
+
+/* contact style */
+
+/* Contact Header */
+.contact-header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--bg-color);
+    color: var(--main-color);
+}
+
+.contact-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    font-size: 18px;
+}
+
+/* Contact Information Section */
+.contact-info-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    background-color: var(--bg-color);
+}
+
+.contact-info-card {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    width: 250px;
+    color: var(--text-color);
+    transition: transform 0.3s;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact-info-card h3 {
+    color: var(--main-color);
+    margin-top: 10px;
+}
+
+.contact-info-card p {
+    font-size: 16px;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    background-color: var(--bg-color);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-form-section h2 {
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #8e6e45;
+}
+
+/* Map Section */
+.map-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+.map-section h2 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.map-container iframe {
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+}
+
+/* responsiveness */
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    section {
+        padding: 0 10%;
+    }
+    .hero {
+        grid-template-columns: 1fr; /* Stack hero section in single column */
+        text-align: center;
+    }
+    .hero-img img {
+        width: 90%;
+    }
+    .navlist a {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 20px 5%;
+    }
+    .hero {
+        height: auto;
+    }
+    .aboutus, .about-container, .contact-form {
+        padding: 20px;
+        max-width: 100%;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-column {
+        width: 100%;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    .navlist {
+        display: none; /* Hide navbar on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background-color: var(--bg-color);
+    }
+    .navlist a {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+    .aboutus {
+        font-size: 2.5rem;
+    }
+    .footer-container {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .about h2, .about h3, .contact-header h1, .contact-form-section h2 {
+        font-size: 1.8rem;
+    }
+    .btn, .nav-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    .scroll a {
+        font-size: 16px;
+    }
+    .footer-column h2 {
+        font-size: 16px;
+    }
+    .contact-info-card {
+        width: 90%;
+    }
+    .price {
+        font-size: 24px;
+    }
+}
+
+
+
+
+

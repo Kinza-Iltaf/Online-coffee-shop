@@ -1,0 +1,78 @@
+/* General Section Styling */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    color: #fff;
+    background-color: #111; /* Adjust to match the main theme */
+}
+
+/* Text and Image Box Styling */
+.section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    gap: 30px;
+}
+
+.text-box {
+    flex: 1;
+    background-color: #222; /* Light main color to match theme */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    animation: fadeInText 1s ease;
+}
+
+.image-box {
+    flex: 1;
+    animation: fadeInImage 1s ease;
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.2rem;
+    color: #ffcb05; /* Main accent color */
+    margin-bottom: 20px;
+}
+
+/* List Styling */
+.text-box ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #fff;
+}
+
+.text-box li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Alternating Section Layout */
+.section-1 .section-content {
+    flex-direction: row;
+}
+
+.section-2 .section-content {
+    flex-direction: row-reverse;
+}
+
+/* Animation Effects */
+@keyframes fadeInText {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInImage {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
